@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Navigation from "@/components/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
             </motion.button>
           </Link>
         </div>
+        <Footer></Footer>
       </main>{" "}
     </>
   );

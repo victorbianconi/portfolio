@@ -219,6 +219,17 @@
   margin-bottom: 0;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 2.1rem 0;
+}
+.footer__text {
+  color: var(--grey-color);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
   .page__main-container {
     width: 90vw;
@@ -250,5 +261,12 @@
   }
   .nav__right {
     display: none;
+  }
+  .footer__text {
+    width: 85%;
+    font-size: 1.15rem;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
 }/*# sourceMappingURL=main.css.map */

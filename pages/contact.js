@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navigation from "@/components/navigation";
 import { motion } from "framer-motion";
+import Footer from "@/components/footer";
 
 export default function Projects() {
   return (
@@ -98,6 +99,7 @@ export default function Projects() {
             </motion.form>
           </div>
         </div>
+        <Footer/>
       </motion.main>
     </>
   );

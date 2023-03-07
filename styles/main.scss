@@ -261,6 +261,18 @@
 }
 
 
+.footer {
+    position:absolute;
+    bottom: 0;
+    padding: 2.1rem 0;
+    &__text {
+        color: var(--grey-color);
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+
 
 @media screen and (max-width: 1000px) {
     .page {
@@ -309,6 +321,14 @@
 
         &__right {
             display: none;
+        }
+    }
+
+    .footer {
+        &__text {
+            width: 85%;
+            font-size: 1.15rem;
+            user-select: none;
         }
     }
 }
