@@ -90,8 +90,7 @@ export default function Projects() {
                 placeholder="Message"
               ></textarea>
               <p className="select-none text-2xl mb-5 text-gold-900 font-medium">
-                You will <span className="font-bold">not</span> receive any spam
-                email.
+                I do <span className="font-bold">not</span> store your email.
               </p>
               <button className="contact-form__submit-btn text-2xl font-medium">
                 Send message
