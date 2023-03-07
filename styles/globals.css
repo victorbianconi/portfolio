@@ -91,6 +91,16 @@ a {
   text-decoration: none;
 }
 
+::-moz-selection {
+  background-color: var(--victor-color);
+  color: var(--body-text);
+}
+
+::selection {
+  background-color: var(--victor-color);
+  color: var(--body-text);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

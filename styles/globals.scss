@@ -99,6 +99,11 @@ a {
   text-decoration: none;
 }
 
+::selection {
+  background-color: var(--victor-color);
+  color: var(--body-text);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
