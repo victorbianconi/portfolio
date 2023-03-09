@@ -98,7 +98,6 @@ export default function Projects() {
             </motion.form>
           </div>
         </div>
-        <Footer/>
       </motion.main>
     </>
   );
