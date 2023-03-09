@@ -71,6 +71,7 @@ export default function Projects() {
                 className="text-input font-medium w-full text-2xl"
                 type="email"
                 placeholder="Email"
+                required
                 name="email"
               ></input>
               <input
@@ -78,11 +79,13 @@ export default function Projects() {
                 type="name"
                 placeholder="Name"
                 name="name"
+                required
               ></input>
               <textarea 
                 name="message"
                 className="text-input font-medium w-full text-2xl"
                 placeholder="Message"
+                required
               ></textarea>
               <p className="select-none text-2xl mb-5 text-gold-900 font-medium">
                 I do <span className="font-bold">not</span> store your email.
