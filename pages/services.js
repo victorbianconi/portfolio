@@ -53,7 +53,7 @@ export default function Services() {
                   Full-stack development
                 </h3>
                 <p className="text-xl text-gold-500">
-                  Starting from 3500€/month
+                  80€/hour
                 </p>
               </div>
               <div className="page__card-right flex-col">
@@ -182,7 +182,7 @@ export default function Services() {
                   Front-end development
                 </h3>
                 <p className="text-xl text-gold-500">
-                  Starting from 2500€/month
+                  70€/hour
                 </p>
               </div>
               <div className="page__card-right flex-col">
