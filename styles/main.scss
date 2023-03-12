@@ -143,7 +143,6 @@
     &__card {
         display: flex;
         max-width: 650px;
-        cursor: pointer;
         align-items: center;
         width: auto;
         user-select: none;
@@ -262,13 +261,48 @@
 
 
 .footer {
-    position:absolute;
+    position: absolute;
     bottom: 0;
     padding: 2.1rem 0;
+
     &__text {
         color: var(--grey-color);
         font-size: 1.2rem;
         text-align: center;
+    }
+}
+
+
+.btn {
+    padding: 1.2rem 2.1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    &:active {
+        transform: scale(.97);
+    }
+
+    &--primary {
+
+        background-color: var(--victor-color);
+        color: var(--body-text);
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var(--victor-color-800);
+        }
+    }
+
+    &--secondary {
+        color: var(--grey-color);
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            color: var(--victor-color);
+            background-color: var(--grey-color-light);
+        }
     }
 }
 
@@ -282,7 +316,7 @@
 
         &__card {
             flex-direction: column;
-       
+
             &-left {
                 padding: 2.1rem 0;
             }

@@ -14,7 +14,7 @@
   --background-end-rgb: 255, 255, 255;
   --victor-color-300: hsl(39, 60%, 64%);
   --victor-color-400: hsl(39, 55%, 54%);
-  --victor-color: hsl(39, 44%, 44%);
+  --victor-color: rgb(162, 127, 63);
   --victor-color-600: hsl(39, 60%, 35%);
   --victor-color-700: hsl(39, 70%, 35%);
   --victor-color-800: hsl(39, 75%, 20%);
@@ -22,6 +22,7 @@
   --victor-color-1000: #1c170d;
   --body-text: #f0f0f0;
   --grey-color: hsl(39, 8%, 50%);
+  --grey-color-light: hsl(39, 8%, 90%);
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
       #0885ff33 55deg,
