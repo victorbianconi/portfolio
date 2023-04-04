@@ -1,8 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import Navigation from "@/components/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -191,10 +187,11 @@ export default function Projects() {
                           </svg>
                         </button>
                       </Link>
-
-                      <button className="text-xl btn btn--secondary ">
-                        Full overview
-                      </button>
+                      <Link href="/projects/bramosa">
+                        <button className="text-xl btn btn--secondary ">
+                          Full overview
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
