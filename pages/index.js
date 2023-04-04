@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Victor Bianconi | Web Developer and Entrepreneur</title>
+        <title>Victor Bianconi | Web Developer</title>
         <meta name="description" content="Victor Bianconi is a web developer and designer based in Italy." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -35,8 +35,7 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             className="text-3xl"
           >
-            I'm a <span className="font-bold">freelance web developer</span> and{" "}
-            <span className="font-bold ">entrepreneur</span>
+            I'm a <span className="font-bold">full-stack web developer</span>
           </motion.h2>
           <Link href="/services">
             <motion.button
