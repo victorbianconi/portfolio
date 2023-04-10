@@ -1,12 +1,10 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
 export default function Navigation({ children }) {
   const path = usePathname();
-
- 
-
+  
   return (
     <>
       <motion.nav

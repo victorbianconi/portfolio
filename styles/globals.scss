@@ -12,6 +12,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --body-color: hsla(0, 0%, 0%, 0.95);
   --victor-color-300: hsl(39, 60%, 64%);
   --victor-color-400: hsl(39, 55%, 54%);
   --victor-color: rgb(162, 127, 63);
@@ -22,6 +23,7 @@
   --victor-color-1000: #1c170d;
   --body-text: #f0f0f0;
   --grey-color: hsl(39, 8%, 50%);
+  --grey-color-dark: hsl(39, 8%, 12%);
   --grey-color-light: hsl(39, 8%, 90%);
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
@@ -93,6 +95,12 @@ body {
 body {
   color: var(--body-text);
   background-color: var(--victor-color-1000);
+}
+
+.body {
+  &--black {
+    background-color: var(--body-color);
+  }
 }
 
 a {

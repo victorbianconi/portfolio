@@ -1,0 +1,21 @@
+.image-container {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    height: 65vh;
+    width: 100%;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .image-container {
+        height: 30vh;
+    }
+}

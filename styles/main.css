@@ -73,6 +73,14 @@
   margin-right: 0;
 }
 
+.link {
+  color: var(--victor-color);
+  transition: 0.2s ease-in-out;
+}
+.link:hover {
+  color: var(--victor-color-300);
+}
+
 .landing__intro {
   display: flex;
   flex-direction: column;
@@ -216,6 +224,13 @@
 }
 .text-input:last-child {
   margin-bottom: 0;
+}
+
+.divider {
+  height: 2px;
+  background-color: var(--grey-color-dark);
+  width: 100%;
+  margin: 1.6rem 0;
 }
 
 .footer {

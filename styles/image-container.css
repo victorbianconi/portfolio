@@ -1,0 +1,23 @@
+.image-container {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  height: 65vh;
+  width: 100%;
+}
+.image-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .image-container {
+    height: 30vh;
+  }
+}/*# sourceMappingURL=image-container.css.map */
