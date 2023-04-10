@@ -21,7 +21,7 @@ export default function Bramosa() {
     {
       title: "Chat messaging",
       description:
-        "Creators can easily manage their content requests in one place.",
+        "Chat messaging via websockets.",
       imgSrc: "/images/bramosa/chat-messaging.webp",
       imgAlt: "chat messaging",
     },
