@@ -3,8 +3,29 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 
 export default function Bramosa() {
-  // I would have put each div below in a component as not to duplicate code,
-  // but for this simple portfolio I decided to keep things simple.
+  const sections = [
+    {
+      title: "Authentication system",
+      description:
+        "You can fully sign up and authenticate. Refresh and access tokens are used to garner user access.",
+      imgSrc: "/images/bramosa/signup.webp",
+      imgAlt: "signup",
+    },
+    {
+      title: "Easy booking management",
+      description:
+        "Creators can easily manage their content requests in one place.",
+      imgSrc: "/images/bramosa/booking-management.webp",
+      imgAlt: "booking management",
+    },
+    {
+      title: "Chat messaging",
+      description:
+        "Creators can easily manage their content requests in one place.",
+      imgSrc: "/images/bramosa/chat-messaging.webp",
+      imgAlt: "chat messaging",
+    },
+  ];
 
   return (
     <>
@@ -73,27 +94,22 @@ export default function Bramosa() {
             </motion.div>
           </div>
 
-          <ProjectSection
-            title="Authentication system"
-            description="You can fully sign up and authenticate. Refresh and access tokens
-            are used to garner user access."
-            imgSrc="/images/bramosa/signup.webp"
-            imgAlt="signup"
-          />
-          <div className="divider" />
-          <ProjectSection
-            title="Easy booking management"
-            description="Creators can easily manage their content requests in one place."
-            imgSrc="/images/bramosa/booking-management.webp"
-            imgAlt="booking management"
-          />
-          <div className="divider" />
-          <ProjectSection
-            title="Chat messaging"
-            description="Web sockets chat messaging. Messages are limited in nature and can be acquired by booking content from the creator. Creators can send unlimited messages to other creators."
-            imgSrc="/images/bramosa/chat-messaging.webp"
-            imgAlt="booking management"
-          />
+          {sections.map((section, index) => {
+            return (
+              <>
+                <ProjectSection
+                  key={section.title}
+                  title={section.title}
+                  description={section.description}
+                  imgSrc={section.imgSrc}
+                  imgAlt={section.imgAlt}
+                />
+                {index !== sections.length - 1 && (
+                  <div className="divider"></div>
+                )}
+              </>
+            );
+          })}
         </div>
       </motion.main>
     </>
