@@ -142,7 +142,11 @@ export default function ProjectCard(props) {
               <p className="mb-3 font-medium">{props.overviewDetails.title}</p>
               <div className="flex center flex-col">
                 {props.overviewDetails.list.map((item) => {
-                  return <p className="text-lg">- {item}</p>;
+                  return (
+                    <p key={item} className="text-lg">
+                      - {item}
+                    </p>
+                  );
                 })}
               </div>
             </div>
