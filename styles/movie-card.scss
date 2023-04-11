@@ -1,0 +1,23 @@
+.movie-card {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    width: 350px;
+    background-color: var(--grey-color-dark);
+    
+    &__image {
+        &-container {
+            max-height: 150px;
+            overflow: hidden;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.movie-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  width: 350px;
+  background-color: var(--grey-color-dark);
+}
+.movie-card__image-container {
+  max-height: 150px;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.movie-card__image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=movie-card.css.map */

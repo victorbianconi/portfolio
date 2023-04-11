@@ -147,7 +147,9 @@
 }
 .page__card-left {
   padding: 0 2.1rem;
-  max-width: 300px;
+  justify-content: center;
+  display: flex;
+  width: 285px;
 }
 .page__card-right {
   height: 100%;
