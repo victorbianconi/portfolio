@@ -122,6 +122,9 @@ export default function MovifyIndex() {
                 })}
               </div>
             )}
+            {relatedMovies.data && !relatedMovies.data.results?.length && (
+              <p className="text-2xl">No related movies found.</p>
+            )}
           </div>
         </div>
       </motion.main>
