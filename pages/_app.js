@@ -24,7 +24,7 @@ export default function App({ Component, pageProps, router }) {
   useEffect(() => {
     const body = document.querySelector("body");
 
-    if (router.pathname?.includes("bramosa")) {
+    if (router.pathname?.includes("/projects/")) {
       body.classList.add("body--black");
     } else {
       body.classList.remove("body--black");

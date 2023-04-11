@@ -27,6 +27,21 @@ export default function MovifyIndex() {
     }
   );
 
+  const relatedMovies = useQuery(
+    ["related", selectedMovie?.id],
+    async () =>
+      await fetch(
+        `https://api.themoviedb.org/3/movie/${selectedMovie?.id}/similar?api_key=${API_KEY}`
+      ).then((res) => res.json()),
+    {
+      enabled: Boolean(selectedMovie?.id),
+      refetchOnWindowFocus: false,
+      refetchOnMount: false,
+      cacheTime: 5000000,
+      staleTime: 5000000,
+    }
+  );
+
   return (
     <>
       <Head>
@@ -82,17 +97,30 @@ export default function MovifyIndex() {
               onSelect={(data) => setSelectedMovie(data)}
             ></Searchbar>
             {selectedMovie && (
-              <p className="text-2xl mt-8 pointer-events-none">
-                Movies similar to
+              <p className="text-2xl mt-8 pointer-events-none text-center">
+                Movies similar to (according to themoviedb.org)
               </p>
             )}
             {selectedMovie && (
               <MovieCard classNames="mt-7" data={selectedMovie}></MovieCard>
             )}
-            {selectedMovie && (
+            {relatedMovies.isFetching && (
               <p className="text-2xl mt-8 pointer-events-none">
-                Work in progress...
+                Looking for similar movies...
               </p>
+            )}
+            {relatedMovies.data && relatedMovies.data.results && (
+              <div className="movie-card__wrapper">
+                {relatedMovies.data?.results.map((movie) => {
+                  return (
+                    <MovieCard
+                      classNames={"mb-6"}
+                      key={movie.id}
+                      data={movie}
+                    ></MovieCard>
+                  );
+                })}
+              </div>
             )}
           </div>
         </div>
