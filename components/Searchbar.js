@@ -22,19 +22,22 @@ export default function Searchbar(props) {
       ></input>
       {props.query && props.query.data && showResults && (
         <div className="searchbar__results">
-          {props.query.data.results.slice(0, props.limit).map((result) => {
-            return (
-              <span
-                onClick={() => {
-                  props.onSelect(result);
-                  setShowResults(false);
-                }}
-                className="text-2xl"
-              >
-                {result.title} ({dayjs(result.release_date).format("YYYY")})
-              </span>
-            );
-          })}
+          {props.query.data.results
+            .slice(0, props.limit)
+            .map((result, index) => {
+              return (
+                <span
+                  key={"searchbar_" + index}
+                  onClick={() => {
+                    props.onSelect(result);
+                    setShowResults(false);
+                  }}
+                  className="text-2xl"
+                >
+                  {result.title} ({dayjs(result.release_date).format("YYYY")})
+                </span>
+              );
+            })}
         </div>
       )}
     </div>
