@@ -34,8 +34,7 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             className="text-3xl"
           >
-            I'm a <span className="font-bold">full-stack web developer</span> &{" "}
-            <span className="font-bold">entrepreneur</span>
+            I'm a <span className="font-bold">full-stack web developer</span>
           </motion.h2>
 
           <Link href="/services">
