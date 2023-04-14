@@ -51,12 +51,8 @@ export default function MovifyIndex() {
     }
   );
 
-  console.log(relatedMovies);
-
   useEffect(() => {
     if (!movieCardInView) return;
-
-    console.log("fetching next page");
 
     relatedMovies.fetchNextPage();
   }, [movieCardInView]);
