@@ -1,0 +1,20 @@
+.todo-task {
+  padding: 1.6rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  background-color: var(--grey-color-dark);
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+.todo-task:last-child {
+  margin-bottom: 0;
+}
+.todo-task__wrapper {
+  margin: 2.1rem 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.todo-task__divider {
+  margin-top: 2.1rem;
+}/*# sourceMappingURL=todo.css.map */

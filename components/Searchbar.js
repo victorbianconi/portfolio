@@ -14,12 +14,21 @@ export default function Searchbar(props) {
       className={"searchbar " + (props.classNames ? props.classNames : "")}
     >
       <input
-        onClick={() => setShowResults(true)}
+        onClick={() => {
+          if (!props.query) return;
+          setShowResults(true);
+        }}
         onChange={props.onChange}
+        onKeyDown={(e) => {
+          if (props.onEnter && e.key === "Enter") {
+            props.onEnter(e);
+          }
+        }}
         className="searchbar__input"
-        placeholder="What's the original movie?"
+        placeholder={props.placeholder}
         type="text"
       ></input>
+
       {props.query && props.query.data && showResults && (
         <div className="searchbar__results">
           {props.query.data.results

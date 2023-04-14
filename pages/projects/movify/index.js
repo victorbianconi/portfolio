@@ -110,6 +110,7 @@ export default function MovifyIndex() {
                 setSearchTerm(e.target.value);
               }}
               onSelect={(data) => setSelectedMovie(data)}
+              placeholder="What's the original movie?"
             ></Searchbar>
             {selectedMovie && (
               <p className="text-2xl mt-8 pointer-events-none text-center">

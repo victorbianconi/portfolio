@@ -5,6 +5,7 @@ import "@/styles/image-container.css";
 import "@/styles/main.css";
 import "@/styles/movie-card.css";
 import "@/styles/searchbar.css";
+import "@/styles/todo.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
