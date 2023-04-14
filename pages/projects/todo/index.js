@@ -11,7 +11,6 @@ export default function ToDoIndex() {
   const [hasSaved, setHasSaved] = useState();
   const [hasStored, setHasStored] = useState();
 
-
   const saveTasks = () => {
     setHasSaved(true);
     localStorage.setItem("todo-tasks", JSON.stringify(tasks));
@@ -171,6 +170,7 @@ export default function ToDoIndex() {
                         .map((task) => {
                           return (
                             <TodoTask
+                              key={task.value + task.date}
                               value={task.value}
                               date={task.date}
                               isCompleted={task.isCompleted}
@@ -199,6 +199,7 @@ export default function ToDoIndex() {
                       {tasks.map((task) => {
                         return (
                           <TodoTask
+                            key={task.value + task.date}
                             value={task.value}
                             date={task.date}
                             isCompleted={task.isCompleted}
