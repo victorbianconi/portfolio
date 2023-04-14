@@ -1,9 +1,10 @@
 import MovieCard from "@/components/MovieCard";
 import Searchbar from "@/components/Searchbar";
-import { useQuery } from "@tanstack/react-query";
-import { motion } from "framer-motion";
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { useDebounce } from "use-debounce";
 
 export default function MovifyIndex() {
@@ -11,6 +12,10 @@ export default function MovifyIndex() {
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearchTerm] = useDebounce(searchTerm, 1500);
   const [selectedMovie, setSelectedMovie] = useState();
+  const [movieCardRef, movieCardInView, entry] = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
 
   const searchMovies = useQuery(
     ["search", debouncedSearchTerm],
@@ -27,11 +32,11 @@ export default function MovifyIndex() {
     }
   );
 
-  const relatedMovies = useQuery(
+  const relatedMovies = useInfiniteQuery(
     ["related", selectedMovie?.id],
-    async () =>
+    async ({ pageParam = 1 }) =>
       await fetch(
-        `https://api.themoviedb.org/3/movie/${selectedMovie?.id}/similar?api_key=${API_KEY}`
+        `https://api.themoviedb.org/3/movie/${selectedMovie?.id}/recommendations?api_key=${API_KEY}&page=${pageParam}`
       ).then((res) => res.json()),
     {
       enabled: Boolean(selectedMovie?.id),
@@ -39,8 +44,22 @@ export default function MovifyIndex() {
       refetchOnMount: false,
       cacheTime: 5000000,
       staleTime: 5000000,
+      getNextPageParam: (lastPage, allPages) => {
+        if (lastPage.results.length === 21) return allPages.length + 1;
+        return undefined;
+      },
     }
   );
+
+  console.log(relatedMovies);
+
+  useEffect(() => {
+    if (!movieCardInView) return;
+
+    console.log("fetching next page");
+
+    relatedMovies.fetchNextPage();
+  }, [movieCardInView]);
 
   return (
     <>
@@ -109,20 +128,31 @@ export default function MovifyIndex() {
                 Looking for similar movies...
               </p>
             )}
-            {relatedMovies.data && relatedMovies.data.results && (
-              <div className="movie-card__wrapper">
-                {relatedMovies.data?.results.map((movie) => {
-                  return (
-                    <MovieCard
-                      classNames={"mb-6"}
-                      key={movie.id}
-                      data={movie}
-                    ></MovieCard>
-                  );
-                })}
-              </div>
-            )}
-            {relatedMovies.data && !relatedMovies.data.results?.length && (
+            {relatedMovies.data &&
+              relatedMovies.data.pages &&
+              relatedMovies.data?.pages?.length > 0 && (
+                <div className="movie-card__wrapper">
+                  <AnimatePresence>
+                    {relatedMovies.data?.pages?.map((page) => {
+                      return page.results.map((movie, index) => {
+                        return (
+                          <MovieCard
+                            lastRef={
+                              index + 1 === page.results.length
+                                ? movieCardRef
+                                : null
+                            }
+                            classNames={"mb-6"}
+                            key={movie.id}
+                            data={movie}
+                          ></MovieCard>
+                        );
+                      });
+                    })}
+                  </AnimatePresence>
+                </div>
+              )}
+            {relatedMovies.data && !relatedMovies.data.pages?.length && (
               <p className="text-2xl">No related movies found.</p>
             )}
           </div>
