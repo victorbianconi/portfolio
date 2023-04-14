@@ -85,6 +85,10 @@ export default function ToDoIndex() {
                 setTask(e.target.value);
               }}
               onEnter={(e) => {
+                const existsAlready = tasks.find(
+                  (t) => t.value === e.target.value
+                );
+                if (existsAlready) return;
                 setTask("");
                 setTasks([
                   ...tasks,
