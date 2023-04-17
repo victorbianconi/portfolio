@@ -45,7 +45,7 @@ export default function Home() {
               exit={{ opacity: 0 }}
               className="landing__btn font-medium mt-12"
             >
-              How can you help me?
+              How I can help you
             </motion.button>
           </Link>
 
