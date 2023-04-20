@@ -12,6 +12,10 @@ These two projects are extremely simple and I made them in a couple of hours jus
 It's 2023 and you definitely don't want to create custom animations with keyframes on CSS when you have libraries like Framer Motion.
 Framer Motion allows you to create amazing animations and transitions without ending up with garbage code. 
 
+## Page Speed and Performance
+
+![Page speed insights](/pagespeedinsights.png)
+
 ----------------------------
 
 
