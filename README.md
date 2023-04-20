@@ -1,3 +1,15 @@
+## Intro
+
+Built this site to showcase my skills and projects. 
+The tech stack is NextJS, Tailwind (with some custom CSS), and React Framer Motion. 
+
+## Movify and To-Do
+
+These two projects are extremely simple and I made them in a couple of hours just to showcase my abilities in dealing with data structures and APIs. 
+
+----------------------------
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
