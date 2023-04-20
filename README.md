@@ -5,7 +5,7 @@ The tech stack is NextJS, Tailwind (with some custom CSS), and React Framer Moti
 
 ## Movify and To-Do
 
-These two projects are extremely simple and I made them in a couple of hours just to showcase my abilities in dealing with data structures and APIs. 
+These two projects are extremely simple and I made them in a couple of hours just to showcase my abilities in dealing with data structures (filtering, spread operators, etc.) and APIs. 
 
 ----------------------------
 
