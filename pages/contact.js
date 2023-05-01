@@ -1,5 +1,5 @@
-import Head from "next/head";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function Projects() {
   return (
@@ -38,8 +38,19 @@ export default function Projects() {
             className="text-3xl leading-10 mb-6"
           >
             Need a website for your business? Not sure what requirements you
-            need? Feel free to contact me through the form below.
+            need? Feel free to send a mail to{" "}
+            <motion.a
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              href="mailto:info@victorbianconi.com"
+              className="text-3xl leading-10 mb-6 font-medium text-gold-500 underline"
+            >
+              info@victorbianconi.com
+            </motion.a>{" "}
+            or contact me through the form below
           </motion.p>
+
           <div className="flex justify-center w-full">
             <motion.form
               animate={{ opacity: 1 }}
@@ -81,7 +92,7 @@ export default function Projects() {
                 name="name"
                 required
               ></input>
-              <textarea 
+              <textarea
                 name="message"
                 className="text-input font-medium w-full text-2xl"
                 placeholder="Message"
