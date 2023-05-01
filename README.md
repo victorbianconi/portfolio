@@ -1,3 +1,24 @@
+## Intro
+
+Built this site to showcase my skills and projects. 
+The tech stack is NextJS, Tailwind (with some custom CSS), and React Framer Motion. 
+
+## Movify and To-Do
+
+These two projects are extremely simple and I made them in a couple of hours just to showcase my abilities in dealing with data structures (filtering, spread operators, etc.) and APIs. 
+
+## React Framer Motion
+
+It's 2023 and you definitely don't want to create custom animations with keyframes on CSS when you have libraries like Framer Motion.
+Framer Motion allows you to create amazing animations and transitions without ending up with garbage code. 
+
+## Page Speed and Performance
+
+![Page speed insights](/pagespeedinsights.png)
+
+----------------------------
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
